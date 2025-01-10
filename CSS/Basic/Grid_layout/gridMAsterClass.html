@@ -53,11 +53,11 @@
     </div>
     <div class="container">
         <h2>5. Grid Template Areas</h2>
-        <div class="grid-container">
-            <div class="box" style="grid-column: 1/4;">Header</div>
-            <div class="box">Sidebar</div>
-            <div class="box" style="grid-column: 2/4;">Main Content</div>
-            <div class="box" style="grid-column: 1/4;">Footer</div>
+        <div class="grid-container" style="grid-template-areas: 'header header header' 'sidebar main main' 'footer footer footer';">
+            <div class="box" style="grid-area:header ;">Header</div>
+            <div class="box" style="grid-area: sidebar ;">Sidebar</div>
+            <div class="box" style="grid-area: main ;">Main Content</div>
+            <div class="box" style="grid-area: footer;">Footer</div>
         </div>
     </div>
     <div class="container">
