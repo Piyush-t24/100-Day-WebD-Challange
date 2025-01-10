@@ -1,0 +1,34 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    background-color:#F0F0F0;
+    padding: 20px;
+}
+h1,h2{
+    color: #333;
+}
+.container{
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    border: 2px solid #333;
+}
+.grid-container{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: #ddd;
+    padding: 10px;
+    margin: 10px;
+}
+.box{
+    background-color:#3498db;
+    color: white;
+    padding: 20px;
+    font-size: 18px;
+    text-align: center;
+}
+.box:nth-child(even){
+    background-color: #e74c3c;
+}
