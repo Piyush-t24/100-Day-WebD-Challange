@@ -1,0 +1,26 @@
+SASS/SCSS
+
+SASS is nothing but CSS Preprocessor
+(CSS with superpowers)
+
+SCSS- CSS3
+SASS- CSS
+
+Watch Sass --> Live compilation of SASS or SCSS to CSS
+
+Difference btw CSS and SCSS
+In SCSS, we can use
+1- Operators
+2- Variables
+3- Nesting
+   Nesting me we can use ampersand symbol (&).
+4- Mixin
+   ▪️If we think some properties (like display:flex, justify-content,align-item, flex-direction) will come again and again then use mixin
+   use @ symbol  @mixin and write @include to include where required
+5- Parameters
+6- Partials
+   ▪️We can add all @mixin in another page, and then call later
+   ▪️we create different page for all
+   ▪️Use ( _ ) , to tell sass compiler that dont touch this partial file, no need to compile or anything.
+   ▪️Only compile main.scss to convert into main.css.
+   

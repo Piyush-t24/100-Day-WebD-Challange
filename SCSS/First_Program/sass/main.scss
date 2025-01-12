@@ -1,0 +1,40 @@
+// 1: Operators
+// 2: Variables
+// 3: Nesting
+// 4: Mixin
+// 5: Parameters
+// 6: Partials
+@import "mixin";
+@import "var";
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.main_header {
+  @include flexprob;
+  width: 100vw;
+  height: 100vh;
+  background: $bg-color;
+
+  h1 {
+    @include commoncode(0.8rem , uppercase);
+    &:hover {
+      color: #c8d6e5;
+    }
+  }
+
+  p {
+    @include commoncode(0.3rem , capitalize);
+    &:hover {
+      color: #c8d6e5;
+    }
+  }
+}
