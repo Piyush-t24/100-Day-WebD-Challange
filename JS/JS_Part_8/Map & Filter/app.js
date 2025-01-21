@@ -39,3 +39,4 @@ let ans = nums.filter((el) => {
     return el%2==0;             //even -> true, odd -> false
 });
 console.log(ans);
+
