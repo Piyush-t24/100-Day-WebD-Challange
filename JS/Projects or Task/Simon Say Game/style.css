@@ -1,12 +1,13 @@
 body{
     text-align: center;
+    background-color: wheat;
 }
 .btn{
-    height: 150px;
-    width: 150px;
+    height: 250px;
+    width: 250px;
     border-radius: 20%;
-    border: 7px solid black;
-    margin: 15px 10px ;
+    border: 10px solid black;
+    margin: 20px 15px ;
 }
 .btn-container{
     display: flex;
@@ -23,4 +24,11 @@ body{
 }
 .purple{
     background-color: #819ff9;
+}
+.flash{
+    background-color: white;
+}
+
+.userflash {
+    background-color: greenyellow;
 }
