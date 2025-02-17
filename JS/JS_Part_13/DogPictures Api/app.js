@@ -10,6 +10,7 @@ btn.addEventListener("click", async () => {
 });
 
 
+
 async function getImage() {
   try {
     let res = await axios.get(url2);
@@ -19,3 +20,4 @@ async function getImage() {
     return "No Image found";
   }
 }
+
