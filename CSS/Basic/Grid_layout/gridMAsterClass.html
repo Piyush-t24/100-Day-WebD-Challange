@@ -61,6 +61,17 @@
         </div>
     </div>
     <div class="container">
+        <h2>5. Grid Template Areas</h2>
+        <div class="grid-container" style="
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3,70px);">
+            <div class="box"style="grid-column: 1/4" >Header</div>
+            <div class="box" style="grid-column: 1/2">Sidebar</div>
+            <div class="box" style="grid-column: 2/4">Main Content</div>
+            <div class="box" style="grid-column: 1/4">Footer</div>
+        </div>
+    </div>
+    <div class="container">
         <h2>6. Auto-Fit and Minmax</h2>
         <div class="grid-container" style="grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));">
             <div class="box">1</div>
