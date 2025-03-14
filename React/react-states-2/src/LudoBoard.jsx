@@ -2,7 +2,7 @@ import { useState } from "react";
 
 export default function LudeBoard(){
     let [moves , setMoves] = useState({blue : 0, yellow : 0, green : 0, red : 0});
-
+    let [arr, setArr] = useState(["no moves"]);
     let updateBlue = ()=>{
       // moves.blue += 1;
       // console.log(`moves = ${moves.blue}`);
@@ -12,6 +12,10 @@ export default function LudeBoard(){
       setMoves((prevMoves) => {
         return { ...prevMoves, blue: prevMoves.blue + 1 };
       });
+      
+    //   This is to update an array
+        setArr( (prevArr)=>{return[...prevArr, "blue moves"]});
+        console.log(arr);
     };
     let updateYellow = ()=>{
       setMoves((prevMoves)=>{
@@ -32,6 +36,7 @@ export default function LudeBoard(){
     return (
       <div>
         <p>Game Begins!</p>
+        <p>{arr}</p>
         <div className="board">
           <p>Blue moves = {moves.blue} </p>
           <button style={{ backgroundColor: "blue" }} onClick={updateBlue}>
