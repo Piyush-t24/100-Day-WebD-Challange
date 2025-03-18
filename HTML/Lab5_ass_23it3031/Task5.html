@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        input {
+            width: 100px;
+            padding: 5px;
+            margin: 5px;
+            font-size: 16px;
+            text-align: center;
+        }
+        button {
+            font-size: 18px;
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="num1" placeholder="Enter number">
+    <input type="text" id="num2" placeholder="Enter number">
+    <br>
+    <button onclick="calculate('+')">+</button>
+    <button onclick="calculate('-')">-</button>
+    <button onclick="calculate('*')">*</button>
+    <button onclick="calculate('/')">/</button>
+    <p id="result">Result: </p>
+
+    <script>
+        function calculate(operator) {
+            let num1 = document.querySelector("#num1").value;
+            let num2 = document.querySelector("#num2").value;
+
+            
+            let value1 = Number.parseFloat(num1);
+            let value2 = Number.parseFloat(num2);
+
+            let result;
+
+            if (isNaN(value1) || isNaN(value2)) {
+                result = "Please enter valid numbers!";
+            } else {
+                switch (operator) {
+                    case '+': result = value1 + value2; break;
+                    case '-': result = value1 - value2; break;
+                    case '*': result = value1 * value2; break;
+                    case '/': 
+                        result = value2 !== 0 ? value1 / value2 : "Cannot divide by zero!";
+                        break;
+                    default: result = "Invalid operation!";
+                }
+            }
+
+            document.querySelector("#result").textContent = "Result: " + result;
+            
+        }
+    </script>
+</body>
+</html>

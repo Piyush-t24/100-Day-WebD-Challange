@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Spinner</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        h2 {
+            display: inline-block;
+            transition: transform 0.5s;
+        }
+        .spin {
+            display: inline-block;
+            animation: spin 0.8s ease-in-out;
+        }
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h2 id="text">Hello</h2>
+    <br><br>
+    <input type="text" id="inputBox" placeholder="Enter text">
+    <br><br>
+    <button onclick="updateText()">Change Text</button>
+
+    <script>
+        function updateText() {
+            let input = document.getElementById("inputBox").value;
+            let textElement = document.getElementById("text");
+
+            if (input !== "") {
+                textElement.textContent = input; 
+                textElement.classList.remove("spin"); 
+                void textElement.offsetWidth;
+                textElement.classList.add("spin");
+            }
+        }
+    </script>
+</body>
+</html>

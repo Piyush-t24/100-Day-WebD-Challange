@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+            width: 300px;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        button {
+            margin-top: 20px;
+            font-size: 16px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <table id="sumTable">
+        <tr>
+            <th>Number</th>
+        </tr>
+        <tr>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>1</td>
+        </tr>
+    </table>
+    <button onclick="addRow()">Add Row</button>
+
+    <script>
+        function addRow() {
+            let table = document.getElementById("sumTable");
+            let rows = table.querySelectorAll("tr"); 
+
+            if (rows.length >= 3) {
+                let lastRow = rows[rows.length - 1]; 
+                let secondLastRow = rows[rows.length - 2]; 
+
+                let lastValue = parseInt(lastRow.cells[0].innerText);
+                let secondLastValue = parseInt(secondLastRow.cells[0].innerText);
+
+                let newRow = document.createElement("tr");
+                let newCell = document.createElement("td");
+                newCell.innerText = lastValue + secondLastValue; 
+
+                newRow.appendChild(newCell);
+                table.appendChild(newRow); 
+
+            }
+        }
+    </script>
+</body>
+</html>

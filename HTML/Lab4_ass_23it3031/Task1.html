@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Background and Text</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            transition: background-color 0.5s;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="heading">Click the button to change background and text</h1>
+        <button onclick="changeBackgroundAndText()">Change</button>
+    </div>
+
+    <script>
+        function changeBackgroundAndText() {
+            const colors = ['#ff9999', '#99ff99', '#9999ff', '#ffff99', '#ffccff', '#ccffff'];
+            const texts = ["Welcome!", "Hello World!", "Enjoy Your Day!", "Have Fun!", "Stay Positive!", "Keep Smiling!"];
+            
+            const randomIndex = Math.floor(Math.random() * colors.length);
+            
+            document.body.style.backgroundColor = colors[randomIndex];
+            
+            document.getElementById('heading').innerText = texts[randomIndex];
+        }
+    </script>
+</body>
+</html>
+

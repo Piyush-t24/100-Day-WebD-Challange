@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter with Growing Font</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        p {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        button {
+            font-size: 16px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h2>Counter with Growing Font</h2>
+    <p id="count">0</p>
+    <button onclick="incrementCount()">Increment</button>
+
+    <script>
+        let count = 0;
+
+        function incrementCount() {
+            count++;
+            let countElement = document.getElementById("count");
+            countElement.textContent = count;
+            countElement.style.fontSize = (20 + count * 2) + "px"; 
+        }
+    </script>
+</body>
+</html>

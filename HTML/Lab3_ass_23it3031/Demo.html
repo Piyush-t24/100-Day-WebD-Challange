@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Task Solutions</title>
+    <style>
+        /* T1: Style every other line of an unordered list */
+        ul li:nth-child(odd) {
+            background-color: rgb(173, 216, 230);
+        }
+    </style>
+</head>
+<body>
+    <!-- T1: Unordered List -->
+    <ul>
+        <li>Eswatini</li>
+        <li>Ecuador</li>
+        <li>Tanzania</li>
+        <li>Spain</li>
+        <li>Slovakia</li>
+        <li>Iraq</li>
+    </ul>
+</body>
+</html>
+
+
+// --------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+    <style>
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            font-family: sans-serif;
+            font-size: 14px;
+        }
+        th {
+            background-color: black;
+            color: white;
+            padding: 8px;
+        }
+        tr:nth-child(odd) {
+            background-color: lightgray;
+        }
+        td {
+            padding: 8px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Country</th>
+            <th>Capital</th>
+            <th>Language</th>
+        </tr>
+        <tr><td>Albania</td><td>Tirana</td><td>Albanian</td></tr>
+        <tr><td>Papua New Guinea</td><td>Port Moresby</td><td>English</td></tr>
+        <tr><td>Latvia</td><td>Riga</td><td>Latvian</td></tr>
+        <tr><td>France</td><td>Paris</td><td>French</td></tr>
+    </table>
+</body>
+</html>
+
+
+//--------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3 - Grilled Cheese Sandwich</title>
+    <style>
+        .title {
+            font-family: Arial, sans-serif;
+            font-size: 24px;
+        }
+        .ingredients li {
+            list-style: none;
+            padding: 5px;
+        }
+        .meat {
+            background-color: lightcoral;
+        }
+        .vegetable {
+            background-color: lightgreen;
+        }
+        .dairy {
+            background-color: lightyellow;
+        }
+        .instructions {
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title">Grilled Cheese Sandwich with Bacon, Tomato, and Ham</h1>
+    
+    <h2>Ingredients</h2>
+    <ul class="ingredients">
+        <li class="meat">4 slices of bacon</li>
+        <li class="meat">2 slices of ham</li>
+        <li class="dairy">2 slices of cheddar cheese</li>
+        <li class="vegetable">2 slices of tomato</li>
+        <li class="dair">2 tablespoons butter</li>
+        <li class="dairy">2 slices of bread</li>
+    </ul>
+    
+    <h2 class="instructions">Instructions</h2>
+    <p class="instructions">
+        1. Cook the bacon in a skillet over medium heat until crispy. Remove and drain on paper towels.<br>
+        2. Heat the ham in the skillet for about 30 seconds per side until slightly browned.<br>
+        3. Butter one side of each slice of bread.<br>
+        4. Place one slice of bread, buttered side down, in a skillet over medium heat.<br>
+        5. Layer a slice of cheese, ham, bacon, tomato slices, and another slice of cheese on top.<br>
+        6. Top with the second slice of bread, buttered side up.<br>
+        7. Cook until the bottom slice is golden brown, then flip and cook the other side until golden and cheese is melted.<br>
+        8. Remove from heat, slice in half, and serve warm.
+    </p>
+</body>
+</html>
+
+
+//------------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 4</title>
+    <style>
+        .container {
+            display: flex;
+        }
+        .left, .right {
+            width: 50%;
+            padding: 10px;
+        }
+        .left {
+            background-color: lightgray;
+        }
+        .right {
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <h2>Best Selling Books</h2>
+            <ul>
+                <li>Book 1</li>
+                <li>Book 2</li>
+                <li>Book 3</li>
+                <li>Book 4</li>
+                <li>Book 5</li>
+            </ul>
+        </div>
+        <div class="right">
+            <h2>Favorite Celebrities</h2>
+            <ul>
+                <li>Celebrity 1</li>
+                <li>Celebrity 2</li>
+                <li>Celebrity 3</li>
+                <li>Celebrity 4</li>
+                <li>Celebrity 5</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+
+
+//--------------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 5 - Navbar</title>
+    <style>
+        nav {
+            background-color: lightblue;
+            padding: 10px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 15px;
+            padding: 5px 10px;
+        }
+        nav ul li:hover {
+            background-color: darkblue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+</body>
+</html>
+
+
+//-----------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 6 - Spinning Card</title>
+    <style>
+        .card {
+            width: 150px;
+            height: 200px;
+            background-image: url('card.png');
+            background-size: cover;
+            animation: spin 2s linear infinite;
+        }
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="card"></div>
+</body>
+</html>
+
+
+//-----------------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 7 - Personal Homepage</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="hobbies.html">Hobbies</a></li>
+            <li><a href="teams.html">Favorite Teams</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="content">
+            <h1>Welcome to My Homepage</h1>
+            <p>This is my personal website, where I share my hobbies and favorite sports teams.</p>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2025 My Website</p>
+    </footer>
+</body>
+</html>
+
+
+//----------------------------------------------------------------------------------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 8 - Horizontal Menu</title>
+    <style>
+        .menu {
+            display: flex;
+            background-color: #333;
+        }
+        .menu li {
+            list-style: none;
+            padding: 15px;
+            position: relative;
+            color: white;
+            cursor: pointer;
+        }
+        .menu li:hover > ul {
+            display: block;
+        }
+        .menu ul {
+            display: none;
+            position: absolute;
+            background-color: #444;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            top: 100%;
+            left: 0;
+        }
+        .menu ul li {
+            padding: 10px;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+    <ul class="menu">
+        <li>Home</li>
+        <li>Services
+            <ul>
+                <li>Web Design</li>
+                <li>SEO</li>
+                <li>Marketing</li>
+            </ul>
+        </li>
+        <li>Contact</li>
+    </ul>
+</body>
+</html>

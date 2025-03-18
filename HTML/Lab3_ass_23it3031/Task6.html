@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task6</title>
+    <style>
+      .card {
+        width:150px ;
+        height:200px ;
+        animation: spin 2s linear infinite;
+        background-size: cover;
+
+      }
+      @keyframes spin {
+        from {
+          transform: rotateY(0deg);
+        }
+        to {
+          transform: rotateY(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <img class="card" src="card.png" alt="Card Image" />
+  </body>
+</html>
