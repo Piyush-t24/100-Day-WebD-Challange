@@ -2,11 +2,12 @@ import './App.css'
 import TodoList from './TodoList'
 import Lottery from './Lottery'
 import Ticket from './Ticket'
+import Lottery2  from './Lottery2'
 
 function App() {
   return(
     <>
-    <Ticket ticket={[0, 1, 2]} />
+      <Lottery2 n={3} winningSum={15}/>
     </>
   )
 }
