@@ -39,3 +39,4 @@ console.log(myFullName);
 var sentence = "please piyush, complete TS before end of this month";
 console.log(sentence.length);
 // todo 👉 
+// all are easy, you can do........................................
