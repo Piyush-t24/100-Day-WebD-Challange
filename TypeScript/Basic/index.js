@@ -1,4 +1,4 @@
 console.log("I am Piyush Gupta");
-var num = 5;
+let num1 = 5;
 // num = "vinod"
-num = 55;
+num1 = 55;
