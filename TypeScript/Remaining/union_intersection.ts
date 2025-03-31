@@ -95,7 +95,7 @@ const createUserProfile = (user: User, location: MyLocation) => {
 const myCompleteInfo: User & MyLocation = createUserProfile(user, myLocation);
 console.log(myCompleteInfo);
 
-// todo Homework Question By Thapa Technical: Combine User and Account Data
+// todo Combine User and Account Data
 
 // todo You are building a user management system, and you have two TypeScript types:
 
