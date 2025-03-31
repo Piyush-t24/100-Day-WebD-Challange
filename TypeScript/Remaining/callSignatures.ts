@@ -9,6 +9,7 @@ type Student = {
   age: number;
   gender?: string;
   greet: (country: string) => string; //method call signature
+  //   (country: string) => string;        //pure call signature
 };
 
 const student1: Student = {
