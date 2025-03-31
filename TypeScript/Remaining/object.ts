@@ -3,13 +3,27 @@
 // ? Let's consider a real life example of representing a person's information using Typescript objects
 // ? ->  name, age, isStudent, address{city, country}
 
-const person:{
+const person1:{
     name:string;
     age:number;
     isStudent:boolean;
     address:{city:string; country:string}
 } = {
   name: "Piyush Gupta",
+  age: 20,
+  isStudent: true,
+  address: {
+    city: "Pune",
+    country: "India",
+  },
+};
+const person2:{
+    name:string;
+    age:number;
+    isStudent:boolean;
+    address:{city:string; country:string}
+} = {
+  name: "Vishu Gupta",
   age: 20,
   isStudent: true,
   address: {
