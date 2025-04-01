@@ -13,10 +13,8 @@ var product4 = {
     price: 10000,
     quantity: 10,
 };
-// Calculate Total Price
-// Given the product object from the previous question, write a function called
-// calculateTotalPrice that calculates and returns the total price (price * quantity) of
-// the product.
+//! Calculate Total Price
+//? Given the product object from the previous question, write a function called calculateTotalPrice that calculates and returns the total price (price * quantity) of the product.
 var calculateTotalPrices = function (product) {
     var price = product.price, quantity = product.quantity;
     return price * quantity;

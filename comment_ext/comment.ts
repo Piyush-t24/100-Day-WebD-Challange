@@ -19,7 +19,7 @@ export class MyClass {
     //? This is a query
     let x = 1;
 
-    // this.lineOfCode == commentedOut
+    // //this.lineOfCode == commentedOut
 
     //TODO: Create some test cases
   }
