@@ -29,12 +29,15 @@ Here’s what I have learned so far in sequence:
 📁 100-Day-WebD-Challenge/
 │-- 📂 .vscode                     
 │-- 📂 Backend  
+│-- 📂 comment_ext  
 │-- 📂 CSS
 │-- 📂 HTML  
 │-- 📂 JS 
-│-- 📂  Projects and TAsks 
+│-- 📂 MISCELLANEOUS
+│-- 📂 Projects and TAsks 
 │-- 📂 React  
 │-- 📂 SCSS  
+│-- 📂 TypeScript 
 │-- 📜 README.md  
 ```
 
