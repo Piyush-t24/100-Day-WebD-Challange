@@ -42,7 +42,7 @@ app.get("/posts/new", (req, res) => {
 app.post("/posts", (req, res) => {
   let { username, content } = req.body; //destructure krke username aur content nikal lenge.
   let id = uuidv4();
-  posts.push({id, username, content });
+  posts.push({ id, username, content });
   res.redirect("/posts"); //by default get request hi bhejega
 });
 
@@ -51,6 +51,22 @@ app.get("/posts/:id", (req, res) => {
   let { id } = req.params;
   let post = posts.find((p) => id === p.id);
   res.render("show.ejs", { post });
+});
+
+// To Edit anything
+app.patch("/posts/:id", (req, res) => {
+  let { id } = req.params; //id nikal skte hai
+  let newContent = req.body.content;
+  let post = posts.find((p) => id === p.id); //post ko dhundh skte hai
+  post.content = newContent;
+  console.log(post);
+  res.send("patch request working");
+});
+
+app.get("/posts/:id/edit", (req, res) => {
+  let { id } = req.params;
+  let post = posts.find((p) => id === p.id);
+  res.render("edit.ejs", {post});
 });
 
 app.listen(port, () => {
