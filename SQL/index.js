@@ -1,6 +1,8 @@
 const { faker } = require("@faker-js/faker");
 // import mysql from "mysql2/promise";
 const mysql = require("mysql2");
+const express = require("express");
+const app = express();
 
 // Create the connection to database
 const connection = mysql.createConnection({
@@ -18,7 +20,7 @@ let getRandomUser = () => {
     faker.internet.password(),
   ];
 };
-
+/** 
 // Inserting NEW data
 let q = "INSERT INTO user (id, username, email, password) VALUES ? ";
 // let users = [
@@ -28,19 +30,10 @@ let q = "INSERT INTO user (id, username, email, password) VALUES ? ";
 
 let data = [];
 for (let i = 1; i <= 100; i++) {
-  data.push(getRandomUser());  //100 fake users
+  data.push(getRandomUser()); //100 fake users
 }
+*/
 
-try {
-  connection.query(q, [data], (err, result) => {
-    if (err) throw err;
-    console.log(result);
-  });
-} catch (err) {
-  console.log(err);
-}
-
-connection.end();
 
 // let getRandomUser = () => {
 //   return {
@@ -50,3 +43,24 @@ connection.end();
 //     password: faker.internet.password(),
 //   };
 // };
+
+app.get("/", (req, res) => {
+  res.send("welcome to home page");
+});
+
+app.listen("8080", () => {
+  console.log("server is listening to port 8080");
+});
+
+
+
+// try {
+//   connection.query(q, [data], (err, result) => {
+//     if (err) throw err;
+//     console.log(result);
+//   });
+// } catch (err) {
+//   console.log(err);
+// }
+
+// connection.end();
