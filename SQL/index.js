@@ -10,14 +10,22 @@ const connection = mysql.createConnection({
   password: "Piyush321@",
 });
 
+// Inserting NEW data
+let q = "INSERT INTO user (id, username, email, password) VALUES ? ";
+let users = [
+  ["123b", "123_newuserb", "abc@gmail.comb", "abcb"],
+  ["123c", "123_newuserc", "abc@gmail.comc", "abcc"]
+];
+
 try {
-  connection.query("SHOW TABLES", (err, result) => {
+  connection.query(q, [users], (err, result) => {
     if (err) throw err;
     console.log(result);
   });
 } catch (err) {
   console.log(err);
 }
+
 connection.end();
 
 let getRandomUser = () => {
