@@ -4,7 +4,10 @@ const mysql = require("mysql2");
 const express = require("express");
 const app = express();
 const path = require("path");
+const methodOverride = require("method-override");
 
+app.use(methodOverride("_method"));
+app.use(express.urlencoded({ extended: true }));
 app.set("view engin", "ejs");
 app.set("views", path.join(__dirname, "/views"));
 
@@ -69,14 +72,35 @@ app.get("/user", (req, res) => {
     connection.query(q, (err, users) => {
       if (err) throw err;
       // let count = results[0]["count(*)"];
-      
+
       // res.render("home.ejs", { count });
-      res.render("showusers.ejs", {users});
+      res.render("showusers.ejs", { users });
     });
   } catch (err) {
     console.log(err);
     res.send("some error in DB");
   }
+});
+
+// Edit Route
+app.get("/user/:id/edit", (req, res) => {
+  let { id } = req.params;
+  let q = `SELECT * FROM user WHERE id = '${id}'`;
+  try {
+    connection.query(q, (err, result) => {
+      if (err) throw err;
+      let user = result[0];
+      res.render("edit.ejs", { user });
+    });
+  } catch (err) {
+    console.log(err);
+    res.send("some error in DB");
+  }
+});
+
+// Update (DB) Route
+app.patch("/user/:id", (req, res) => {
+  res.send("updated");
 });
 
 app.listen("8080", () => {
