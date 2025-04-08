@@ -47,6 +47,7 @@ for (let i = 1; i <= 100; i++) {
 //   };
 // };
 
+// Home Route
 app.get("/", (req, res) => {
   let q = `SELECT count(*) FROM user;`;
   try {
@@ -54,6 +55,23 @@ app.get("/", (req, res) => {
       if (err) throw err;
       let count = result[0]["count(*)"];
       res.render("home.ejs", { count });
+    });
+  } catch (err) {
+    console.log(err);
+    res.send("some error in DB");
+  }
+});
+
+// Show Route
+app.get("/user", (req, res) => {
+  let q = `SELECT * FROM user`;
+  try {
+    connection.query(q, (err, users) => {
+      if (err) throw err;
+      // let count = results[0]["count(*)"];
+      
+      // res.render("home.ejs", { count });
+      res.render("showusers.ejs", {users});
     });
   } catch (err) {
     console.log(err);
